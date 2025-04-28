@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gazza Space Station</title>
+  <div class="banne"></div>
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -11,11 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0e0e0e;
-      color: #e0e0e0;
-    }
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	background: linear-gradient(to bottom, #07172b, #2b1238);
+	min-height: 100vh;
+	color: #e0e0e0;
+}
     header {
       color: #ffffff;
       padding: 2rem;
@@ -38,6 +40,13 @@
       max-width: calc((360px * 4) + (2rem * 3));
       margin: auto;
     }
+	.banne {
+	width: 70%;
+	height: 70%; 
+	background-image: url('https://i.imgur.com/Ps3W7HL.png');
+	background-size: cover;
+	background-position: center;
+	}
     .container-second {
       display: flex;
       justify-content: center;
@@ -135,7 +144,7 @@
 </head>
 <body>
   <header>
-    <h1>Gazza Space Station Showcase</h1>
+    <img class="banne" src="https://i.imgur.com/Ps3W7HL.png">
   </header>
   <!-- First row: 4 cards -->
   <div class="container">
@@ -206,9 +215,22 @@
       <a class="button" href="https://3amgamesstudio.itch.io/waxy-the-wick-and-the-witch" target="_blank">View More</a>
     </div>
   </div>
-  <footer style="text-align: center; padding: 3rem 1rem; background-color: #0e0e0e;">
+<footer style="text-align: center; padding: 3rem 1rem; position: relative;">
+  <div style="
+    background-color: rgba(48, 48, 48, 0); 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    z-index: 0;
+    border-top: 1px solid rgba(48, 48, 48, 0);
+    ">
+  </div>
+  <div style="position: relative; z-index: 1;">
     <h2 style="font-family: 'Merriweather', serif; font-size: 1.8rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem;">Join our Community!</h2>
     <a href="https://discord.gg/9gmtSATg" target="_blank" class="button" style="padding: 0.75rem 1.5rem; border-radius: 12px; font-size: 1rem; display: block; max-width: 200px; width: 100%; margin: 0 auto; text-align: center;">Discord</a>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>
